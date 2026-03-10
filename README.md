@@ -159,6 +159,8 @@ ROOT | 124 | +5.8% | High | Bullish
 SOUN | 11 | +2.1% | Normal | Neutral  
 TSSI | 22 | -4.0% | Low | Oversold
 
+Persistencia local con shared_preferences.
+
 ---
 
 ## Ficha de acción
@@ -206,7 +208,7 @@ Incluye:
 - ficha básica de acción
 - indicadores técnicos básicos
 - análisis automático simple
-- persistencia local
+- persistencia local (shared_preferences)
 
 No requiere backend.
 
@@ -431,7 +433,13 @@ UI Dashboard
 
 # Fuentes de datos de mercado
 
-Posibles proveedores:
+Proveedor elegido:
+
+Finnhub (API key requerida).
+
+Validación de tickers con Finnhub antes de añadir a la watchlist.
+
+Posibles proveedores alternativos:
 
 Finnhub  
 Alpha Vantage  
@@ -461,7 +469,7 @@ git clone <repo>
 Ejecutar aplicación:
 
 flutter pub get  
-flutter run
+flutter run --dart-define=FINNHUB_API_KEY=YOUR_KEY --dart-define=TWELVE_DATA_API_KEY=YOUR_KEY
 
 ---
 

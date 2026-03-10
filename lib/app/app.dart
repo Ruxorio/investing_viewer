@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/dashboard/dashboard_screen.dart';
+import 'app_shell.dart';
 import 'router.dart';
 
 class App extends StatelessWidget {
@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Investment Companion',
-      initialRoute: DashboardScreen.routeName,
+      home: const AppShell(),
       onGenerateRoute: AppRouter.onGenerateRoute,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),

@@ -254,19 +254,19 @@ Flutter
 Lenguaje  
 Dart
 
-Gestión de estado  
-Riverpod (probable)
+Gestión de estado (planificado)  
+Riverpod
 
-Persistencia local  
+Persistencia local (planificado)  
 Hive o SQLite
 
-Networking  
+Networking (planificado)  
 Dio o http
 
-Visualización de gráficos  
+Visualización de gráficos (planificado)  
 fl_chart
 
-Notificaciones locales  
+Notificaciones locales (planificado)  
 flutter_local_notifications
 
 ---
@@ -274,22 +274,33 @@ flutter_local_notifications
 # Estructura del repositorio
 
 .
+├── android/  
+├── ios/  
+├── web/  
+├── windows/  
+├── macos/  
+├── linux/  
+├── lib/  
 ├── assets/  
 ├── data/  
 ├── docs/  
 ├── scripts/  
 ├── test/  
 ├── integration_test/  
+├── pubspec.yaml  
 └── README.md
 
 Descripción:
 
+android/ios/web/windows/macos/linux/ → targets de plataforma generados por Flutter  
+lib/ → código fuente de la app  
 assets/ → recursos visuales  
 data/ → datos de ejemplo  
 docs/ → documentación  
 scripts/ → scripts auxiliares  
 test/ → tests unitarios  
-integration_test/ → tests de integración
+integration_test/ → tests de integración  
+pubspec.yaml → configuración de dependencias
 
 ---
 
@@ -303,6 +314,11 @@ models/
 features/
 
 Detalle:
+
+app/
+
+app.dart  
+router.dart
 
 core/
 
@@ -325,6 +341,13 @@ dashboard/
 watchlist/  
 stock_detail/  
 settings/
+
+Pantallas base:
+
+dashboard_screen.dart  
+watchlist_screen.dart  
+stock_detail_screen.dart  
+settings_screen.dart
 
 ---
 
